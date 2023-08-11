@@ -4,25 +4,26 @@
       "id":1,
       "title":"web developer",
       "location":"london",
-      "salary":500000
+      "salary":"500000"
     },
     {
       "id":2,
       "title":"Android Developer",
       "location":"canada",
-      "salary":500000
+      "salary":"150000"
+
     },
     {
       "id":3,
       "title":"cyber security",
       "location":"Turkey",
-      "salary":150000
+      "salary":"2500000"
     },
     {
       "id":4,
       "title":"Software Developer",
       "location":"Pakistan",
-      "salary":200000
+      "salary":"100000"
     },
     {
       "id":5,

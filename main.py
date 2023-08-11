@@ -4,7 +4,7 @@ import json
 app = Flask(__name__)
 
 with open("templates/config/config.json") as f:
-  jobs = json.load(f)["JOBS"]
+  JOBS = json.load(f)["JOBS"]
 
 
 @app.route('/')
@@ -24,7 +24,7 @@ def contact():
 
 @app.route("/post")
 def post():
-  return render_template("post.html")
+  return render_template("post.html", jobs=JOBS)
 
 
 app.run(host='0.0.0.0', port=81)

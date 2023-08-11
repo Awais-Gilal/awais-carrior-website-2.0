@@ -1,0 +1,34 @@
+{
+  "JOBS":[
+    {
+      "id":1,
+      "title":"web developer",
+      "location":"london",
+      "salary":500000
+    },
+    {
+      "id":2,
+      "title":"Android Developer",
+      "location":"canada",
+      "salary":500000
+    },
+    {
+      "id":3,
+      "title":"cyber security",
+      "location":"Turkey",
+      "salary":150000
+    },
+    {
+      "id":4,
+      "title":"Software Developer",
+      "location":"Pakistan",
+      "salary":200000
+    },
+    {
+      "id":5,
+      "title":"Ai Developer",
+      "location":"chaina",
+      "salary":"$95021"
+    }
+  ]
+}

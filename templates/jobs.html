@@ -1,17 +1,17 @@
   {% for job in jobs %}
-  <div class="container-md row border-bottom" style="margin-bottom:16px;padding-bottom:4px;">
-    <div class="col-8">
-      <h4 style="color:rgb(120,120,120); margin-bottom:4px">
-        {{job['title']}}
-      </h4>
-      Location: {{job['location']}}
-      {% if 'salary' in job %}
-         <div>Salary: {{job['salary']}}
-         </div>
-      {% endif %}
-    </div>
-    <div class="col-4">
-      <button type="button" class="btn btn-primary">Apply</button>
-    </div>
+<div class="container-lg row border-bottom" style="margin-bottom:16px;padding-bottom:4px;">
+  <div class="col-8">
+    <h4 style="color:rgb(120,120,120); margin-bottom:4px">
+      {{job['title']}}
+    </h4>
+    Location: {{job['location']}}
+    {% if 'salary' in job %}
+       <div>Salary: {{job['salary']}}
+       </div>
+    {% endif %}
   </div>
+  <div class="col-4">
+    <button type="button" class="btn btn-primary" style='margin-top:8px'>Apply</button>
+  </div>
+</div>
   {% endfor %}

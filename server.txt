@@ -1,0 +1,7 @@
+HOSTING ON : https://www.freesqldatabase.com/account/
+
+Host: sql6.freesqldatabase.com
+Database name: sql6639351
+Database user: sql6639351
+Database password: WCrfFr7VGg
+Port number: 3306

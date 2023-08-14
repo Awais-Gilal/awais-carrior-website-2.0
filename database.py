@@ -10,6 +10,8 @@ def tup_into_dict_contact(tup):
     'msg': tup[4],
     'time': tup[5]
   }
+
+
 def tup_into_dict_job(tup):
   return {
     "id": tup[0],
@@ -21,6 +23,7 @@ def tup_into_dict_job(tup):
     "requirements": tup[6],
     "time": tup[7],
   }
+
 
 username = "sql6639351"
 password = "WCrfFr7VGg"
@@ -44,5 +47,5 @@ def load_jobs():
 
 
 if __name__ == "__main__":
-  
+
   print(load_jobs())

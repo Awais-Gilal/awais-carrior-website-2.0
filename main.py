@@ -2,10 +2,6 @@ from flask import Flask, render_template, request
 import json
 from database import load_jobs
 
-#getting datafrom json
-#with open("templates/config/config.json") as f:
-  #config_data = json.load(f)
-  #JOBS = config_data["JOBS"]
 
 #function for adding data in json
 def save_in_dic(dic, name, email, phone, message):
@@ -38,6 +34,7 @@ def contact():
     email = request.form.get("email")
     phone = request.form.get("phone")
     msg = request.form.get("messaage")
+    
   return render_template("contact.html")
 
 

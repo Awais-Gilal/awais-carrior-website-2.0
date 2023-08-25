@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container px-4 px-lg-5">
+  
+  
+<div class="my-5">
+  <form id="contactForm" data-sb-form-api-token="API_TOKEN" method="post" action="/jobs/form">
+      <div class="form-floating">
+          <input class="form-control" id="title" type="text" placeholder="Enter your Job Title..." data-sb-validations="required" name="title"/>
+          <label for="title">Title</label>
+          <div class="invalid-feedback" data-sb-feedback="name:required">A job title is required.</div>
+      </div>
+      <div class="form-floating">
+          <input class="form-control" id="salary" type="email" placeholder="Enter your email..." data-sb-validations="required,email" name="salary"/>
+          <label for="salary">Job salary</label>
+          <div class="invalid-feedback" data-sb-feedback="email:required">A Salary is required.</div>
+          <div class="invalid-feedback" data-sb-feedback="email:email">Salsry is not valid.</div>
+      </div>
+      <div class="form-floating">
+          <input class="form-control" id="currency" type="text" placeholder="Currency..." data-sb-validations="required" name="currency"/>
+          <label for="currency">currency</label>
+          <div class="invalid-feedback" data-sb-feedback="phone:required">A currency is required</div>
+      </div/>
+      <div class="form-floating">
+          <input class="form-control" id="location" type="text" placeholder="location..." data-sb-validations="required" name="location"/>
+          <label for="location">location</label>
+          <div class="invalid-feedback" data-sb-feedback="phone:required">A location is required</div>
+      </div/>
+      <div class="form-floating">
+          <input class="form-control" id="requirements" type="text" placeholder="requirements..." data-sb-validations="required" name="currency"/>
+          <label for="requirements">Requirements</label>
+          <div class="invalid-feedback" data-sb-feedback="phone:required">A requirements is required</div>
+      </div>
+      <div class="form-floating">
+          <textarea class="form-control" id="resonsibility" placeholder="Enter responsibilities here..." style="height: 12rem" data-sb-validations="required" name="responsibility"></textarea>
+          <label for="message">resonsibility</label>
+          <div class="invalid-feedback" data-sb-feedback="message:required">Responsibilities are required.</div>
+      </div>
+      <br />
+      
+      <div class="d-none" id="submitSuccessMessage">
+          <div class="text-center mb-3">
+              <div class="fw-bolder">Form submission successful!</div>
+              <br />
+              <a href=""></a>
+          </div>
+      </div>
+      
+      </div>
+      <!-- Submit Button-->
+      <button class="btn btn-primary text-uppercase d-flex justify-content-end mb-4" id="submitButton" type="submit" >Submit</button>
+  </form>
+</div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const submitButton = document.getElementById('submitButton');
+    const formInputs = document.querySelectorAll('#contactForm input, #contactForm textarea');
+
+    function checkFormInputs() {
+        let allInputsFilled = true;
+
+        formInputs.forEach(input => {
+            if (input.value.trim() === '') {
+                allInputsFilled = false;
+            }
+        });
+
+        if (allInputsFilled) {
+            submitButton.removeAttribute('disabled');
+        } else {
+            submitButton.setAttribute('disabled', 'true');
+        }
+    }
+
+    formInputs.forEach(input => {
+        input.addEventListener('input', checkFormInputs);
+    });
+
+    checkFormInputs();
+});
+  
+</script>
+{% endblock %}

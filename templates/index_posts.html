@@ -1,0 +1,18 @@
+{% for post in posts %}
+                    <!-- Post preview-->
+<div class="post-preview">
+    <a href="#">
+        <h2 class="post-title">{{post['post_title']}}</h2>
+        <h3 class="post-subtitle">{{post["post"]}}</h3>
+    </a>
+    <p class="post-meta">
+        Posted by
+        <a href="#">{{post["name"]}}</a>
+        on {{post["month"]}} {{post["day"]}}, {{post["year"]}}
+    </p>
+</div>
+{% if not loop.last %}
+   <!-- Divider-->
+   <hr class="my-4" />
+{% endif %}
+{% endfor %}

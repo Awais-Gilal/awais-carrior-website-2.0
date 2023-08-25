@@ -45,6 +45,18 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-sqlalchemy"
+version = "3.0.5"
+description = "Add SQLAlchemy support to your Flask application."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+flask = ">=2.2.5"
+sqlalchemy = ">=1.4.18"
+
+[[package]]
 name = "greenlet"
 version = "2.0.2"
 description = "Lightweight in-process concurrent programming"
@@ -77,6 +89,14 @@ MarkupSafe = ">=2.0"
 
 [package.extras]
 i18n = ["Babel (>=2.7)"]
+
+[[package]]
+name = "jsonify"
+version = "0.5"
+description = "A csv to json converter"
+category = "main"
+optional = false
+python-versions = "*"
 
 [[package]]
 name = "markupsafe"
@@ -147,16 +167,18 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "8d45009269f3e393fd4f5449a870a3a0052c046ada53921204100fd97ae9f92c"
+content-hash = "a028bdd24833af123d3d32493a1def103d412bab268a57aa3d2d8d8f08c48996"
 
 [metadata.files]
 blinker = []
 click = []
 colorama = []
 flask = []
+flask-sqlalchemy = []
 greenlet = []
 itsdangerous = []
 jinja2 = []
+jsonify = []
 markupsafe = []
 sqlalchemy = []
 typing-extensions = []
